@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jeremy Thacker | Litigation Systems Advisory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#00201c",
+                        "primary-container": "#26b8a6",
+                        "inverse-surface": "#e0e3e5",
+                        "on-tertiary-container": "#373b3d",
+                        "on-secondary": "#2d3133",
+                        "on-primary-container": "#00433b",
+                        "on-surface-variant": "#bbcac5",
+                        "surface-container-highest": "#313537",
+                        "inverse-primary": "#006b5f",
+                        "on-secondary-container": "#b2b5b8",
+                        "surface-variant": "#313537",
+                        "surface-bright": "#363a3c",
+                        "primary": "#57dbc8",
+                        "tertiary-fixed": "#e0e3e5",
+                        "primary-fixed": "#77f8e4",
+                        "error": "#ffb4ab",
+                        "surface": "#101416",
+                        "surface-dim": "#101416",
+                        "tertiary-container": "#a2a5a7",
+                        "on-tertiary-fixed": "#181c1e",
+                        "outline-variant": "#3c4946",
+                        "on-surface": "#e0e3e5",
+                        "surface-container": "#1c2022",
+                        "error-container": "#93000a",
+                        "on-background": "#e0e3e5",
+                        "inverse-on-surface": "#2d3133",
+                        "on-primary": "#003731",
+                        "surface-container-lowest": "#0b0f10",
+                        "secondary": "#c4c7c9",
+                        "surface-container-low": "#181c1e",
+                        "on-primary-fixed-variant": "#005047",
+                        "on-secondary-fixed-variant": "#43474a",
+                        "on-tertiary-fixed-variant": "#434749",
+                        "surface-container-high": "#272b2c",
+                        "tertiary": "#c4c7c9",
+                        "on-tertiary": "#2d3133",
+                        "surface-tint": "#57dbc8",
+                        "primary-fixed-dim": "#57dbc8",
+                        "outline": "#869490",
+                        "on-secondary-fixed": "#181c1e",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-error": "#690005",
+                        "secondary-container": "#43474a",
+                        "secondary-fixed": "#e0e3e5",
+                        "background": "#101416"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "xl": "40px",
+                        "margin": "32px",
+                        "gutter": "16px",
+                        "unit": "4px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "display": ["Space Grotesk"],
+                        "body-sm": ["Inter"],
+                        "h2": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "mono-data": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h1": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "h3": ["18px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "500"}],
+                        "mono-data": ["13px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "label-caps": ["11px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                        "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #101416;
+            color: #e0e3e5;
+        }
+        .etched-input {
+            background-color: #0c0f10;
+        }
+        .border-quiet {
+            border-color: #2A2E30;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-[#161B1D] dark:bg-[#161B1D] border-b border-[#2A2E30] docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center h-16 px-6 max-w-[1200px] mx-auto">
+<div class="text-lg font-bold tracking-tighter text-[#26B8A6] font-['Space_Grotesk']" style="">
+                Jeremy Thacker
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] text-sm tracking-tight uppercase text-[#26B8A6] border-b border-[#26B8A6] pb-1 cursor-pointer active:opacity-80" href="#" style="">Work</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-tight uppercase text-[#E0E3E5] opacity-70 hover:text-[#26B8A6] hover:bg-[#1C2124] transition-colors cursor-pointer active:opacity-80" href="#" style="">Services</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-tight uppercase text-[#E0E3E5] opacity-70 hover:text-[#26B8A6] hover:bg-[#1C2124] transition-colors cursor-pointer active:opacity-80" href="#" style="">About</a>
+<a class="font-['Space_Grotesk'] text-sm tracking-tight uppercase text-[#E0E3E5] opacity-70 hover:text-[#26B8A6] hover:bg-[#1C2124] transition-colors cursor-pointer active:opacity-80" href="#" style="">Contact</a>
+</div>
+<button class="bg-[#26B8A6] text-[#101416] px-4 py-2 font-['Space_Grotesk'] text-sm tracking-tight uppercase font-bold transition-all hover:opacity-90 active:scale-95" style="">
+                Work With Me
+            </button>
+</div>
+</nav>
+<main class="max-w-[1200px] mx-auto px-6">
+<!-- Hero Section -->
+<section class="py-xl grid grid-cols-1 lg:grid-cols-12 gap-lg items-center min-h-[716px]">
+<div class="lg:col-span-7 space-y-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container border border-quiet rounded-sm">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant" style="">Litigation Systems Advisory</span>
+</div>
+<h1 class="font-h1 text-display text-on-surface max-w-2xl" style="">
+                    I turn messy discovery into structured evidence for litigation teams.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed" style="">I work with lawyers and legal teams to improve how cases are built, organized, and advanced. Through weekly advisory, custom tools, and hands-on implementation, incremental changes made frequently compound into meaningful gains.</p>
+<p class="font-mono-data text-mono-data text-primary uppercase tracking-tighter" style="">
+                    I work where legal strategy, evidence, and systems design overlap.
+                </p>
+<div class="flex flex-wrap gap-md pt-md">
+<button class="bg-primary-container text-on-primary-fixed font-h3 text-body-md px-lg py-3 font-semibold hover:opacity-90 transition-all" style="">
+                        Work With Me
+                    </button>
+<button class="border border-quiet text-on-surface font-h3 text-body-md px-lg py-3 hover:bg-surface-container-high transition-all" style="">
+                        View Work
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative group">
+<div class="absolute -top-4 -right-4 w-full h-full border border-quiet -z-10"></div>
+<div class="bg-surface-container-low border border-quiet p-xs relative overflow-hidden flex items-center justify-center min-h-[400px]">
+<svg aria-labelledby="case-diagram-title case-diagram-desc" class="w-full h-auto opacity-80 group-hover:opacity-100 transition-opacity duration-700" role="img" viewbox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+<title id="case-diagram-title">Case Intelligence Architecture Diagram</title>
+<desc id="case-diagram-desc">A systems diagram showing the transformation of unstructured discovery data into actionable case strategy through structured evidence, facts, issues, and claims mapping.</desc>
+<defs>
+<marker id="arrowhead" markerheight="7" markerwidth="10" orient="auto" refx="9" refy="3.5">
+<polygon fill="#26B8A6" points="0 0, 10 3.5, 0 7"></polygon>
+</marker>
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2A2E30" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="600" width="1000"></rect>
+<path d="M 500,50 C 150,50 50,200 50,300 C 50,400 150,550 500,550 C 850,550 950,400 950,300 C 950,200 850,50 500,50" fill="none" opacity="0.3" stroke="#26B8A6" stroke-dasharray="4,4" stroke-width="1"></path>
+<text fill="#26B8A6" font-size="10" font-weight="bold" letter-spacing="1" opacity="0.6" text-anchor="middle" x="500" y="35">ITERATIVE REFINEMENT</text>
+<g id="primary-flow">
+<rect fill="#101416" height="40" rx="4" stroke="#26B8A6" stroke-width="1.5" width="160" x="80" y="100"></rect>
+<text fill="#E0E3E5" font-size="11" font-weight="bold" text-anchor="middle" x="160" y="125">INPUT (UNSTRUCTURED)</text>
+<rect fill="#101416" height="40" rx="4" stroke="#26B8A6" stroke-width="1.5" width="160" x="340" y="100"></rect>
+<text fill="#E0E3E5" font-size="11" font-weight="bold" text-anchor="middle" x="420" y="125">EVIDENCE STRUCTURING</text>
+<rect fill="#101416" height="40" rx="4" stroke="#26B8A6" stroke-width="1.5" width="160" x="600" y="100"></rect>
+<text fill="#E0E3E5" font-size="11" font-weight="bold" text-anchor="middle" x="680" y="125">LEGAL ANALYSIS</text>
+<rect fill="#101416" height="40" rx="4" stroke="#26B8A6" stroke-width="1.5" width="160" x="800" y="100"></rect>
+<text fill="#E0E3E5" font-size="11" font-weight="bold" text-anchor="middle" x="880" y="125">OUTPUT (ACTIONABLE)</text>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-width="1.5" x1="240" x2="330" y1="120" y2="120"></line>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-width="1.5" x1="500" x2="590" y1="120" y2="120"></line>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-width="1.5" x1="760" x2="790" y1="120" y2="120"></line>
+</g>
+<circle cx="500" cy="300" fill="#101416" filter="url(#glow)" r="60" stroke="#57DBC8" stroke-width="3"></circle>
+<text fill="#E0E3E5" font-size="20" font-weight="bold" letter-spacing="2" text-anchor="middle" x="500" y="308">CASE</text>
+<rect fill="#101416" height="60" rx="4" stroke="#2A2E30" stroke-width="1" width="120" x="150" y="270"></rect>
+<text fill="#E0E3E5" font-size="12" font-weight="bold" opacity="0.8" text-anchor="middle" x="210" y="305">EVIDENCE</text>
+<line stroke="#2A2E30" stroke-dasharray="4,2" stroke-width="1" x1="270" x2="430" y1="300" y2="300"></line>
+<rect fill="#101416" height="60" rx="4" stroke="#26B8A6" stroke-width="1" width="120" x="350" y="180"></rect>
+<text fill="#E0E3E5" font-size="12" font-weight="bold" text-anchor="middle" x="410" y="215">FACTS</text>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-width="1" x1="410" x2="470" y1="240" y2="265"></line>
+<rect fill="#101416" height="60" rx="4" stroke="#57DBC8" stroke-width="2" width="120" x="630" y="180"></rect>
+<text fill="#E0E3E5" font-size="12" font-weight="bold" text-anchor="middle" x="690" y="215">ISSUES</text>
+<line marker-end="url(#arrowhead)" stroke="#57DBC8" stroke-width="1" x1="560" x2="630" y1="265" y2="225"></line>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-dasharray="6,3" stroke-width="1.5" x1="470" x2="620" y1="210" y2="210"></line>
+<rect fill="#101416" height="60" rx="4" stroke="#2A2E30" stroke-width="1" width="120" x="730" y="270"></rect>
+<text fill="#E0E3E5" font-size="12" font-weight="bold" opacity="0.8" text-anchor="middle" x="790" y="305">CLAIMS</text>
+<line stroke="#2A2E30" stroke-dasharray="4,2" stroke-width="1" x1="560" x2="720" y1="300" y2="300"></line>
+<line marker-end="url(#arrowhead)" stroke="#2A2E30" stroke-dasharray="4,2" stroke-width="1" x1="730" x2="770" y1="240" y2="270"></line>
+<rect fill="#101416" height="100" rx="4" stroke="#26B8A6" stroke-width="1" width="190" x="730" y="390"></rect>
+<text fill="#26B8A6" font-size="12" font-weight="bold" letter-spacing="1" text-anchor="middle" x="825" y="415">STRATEGY</text>
+<circle cx="750" cy="440" fill="#26B8A6" r="2"></circle>
+<text fill="#E0E3E5" font-size="10" opacity="0.8" x="760" y="444">Legal Theory</text>
+<circle cx="750" cy="440" fill="#26B8A6" r="2"></circle>
+<text fill="#E0E3E5" font-size="10" opacity="0.8" x="760" y="464">Case Plan</text>
+<circle cx="750" cy="480" fill="#26B8A6" r="2"></circle>
+<text fill="#E0E3E5" font-size="10" opacity="0.8" x="760" y="484">Trial Position</text>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-width="1.5" x1="690" x2="800" y1="240" y2="385"></line>
+<line marker-end="url(#arrowhead)" stroke="#26B8A6" stroke-width="1.5" x1="790" x2="820" y1="330" y2="385"></line>
+<line marker-end="url(#arrowhead)" stroke="#2A2E30" stroke-dasharray="4,4" stroke-width="1" x1="552" x2="725" y1="330" y2="410"></line>
+</svg>
+<div class="absolute bottom-4 left-4 bg-surface px-3 py-1 border border-quiet">
+<span class="font-label-caps text-[9px] uppercase tracking-[0.2em] text-on-surface-variant" style="">Case intelligence architecture</span>
+</div>
+</div>
+</div>
+</section>
+<!-- System Focus Strip -->
+<section class="py-lg border-y border-quiet flex flex-wrap justify-between gap-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">settings_input_component</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" style="">Structured Evidence</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">account_tree</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" style="">Source Traceability</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">schema</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" style="">Workflow Automation</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm" style="">memory</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" style="">AI-Assisted Review</span>
+</div>
+</section>
+<!-- Pillar Cards -->
+<section class="py-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="bg-surface-container p-lg border border-quiet hover:border-primary-container/30 transition-colors">
+<span class="material-symbols-outlined text-primary mb-md block" style="">database</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-sm" style="">Litigation Data &amp; Discovery Systems</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" style="">
+                        Structure large, inconsistent productions into usable evidence. Map documents, facts, custodians, dates, and issues so litigation teams can see what matters and what is missing.
+                    </p>
+</div>
+<div class="bg-surface-container p-lg border border-quiet hover:border-primary-container/30 transition-colors">
+<span class="material-symbols-outlined text-primary mb-md block" style="">psychology</span>
+<h3 class="font-h3 text-h3 text-on-surface mb-sm" style="">Legal AI &amp; Workflow Advisory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" style="">
+                        Work weekly with high-output lawyers and firm leaders to improve how AI, tools, and process are applied to real matters. Half discussion, half hands-on implementation.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Selected Work Section -->
+<section class="py-xl border-t border-quiet">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-xl gap-sm">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em] mb-xs block" style="">Systems, tools, and advisory work</span>
+<h2 class="font-h2 text-h1 text-on-surface" style="">Selected Work</h2>
+</div>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase border-b border-quiet pb-1" href="#" style="">View More Work</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Project 1 -->
+<article class="group">
+<div class="bg-surface-container border border-quiet overflow-hidden mb-md aspect-[16/9]">
+<div class="w-full h-full bg-[#0C0F10] flex items-center justify-center relative">
+<img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="Minimalist representation of encrypted communication with abstract digital nodes and connections on a dark sleek surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLM_iSmh1KRGG4OpV_Qxp9tqGyGnEE0lu4Ny-R8zIXt4pDdWgiL2vt2tsfJH8SLHaTMtBBXMRE0Ysl1cecht0OfNu39mNYgslmTSDDuuUiuM_iN2jPCJeDJu_p1NWUhgfAoCvW4sLaA95L7h18gfmR73r2-7G3q0m5xw6--YhXyH7EpeUK79t2IN4TIQ4GGgIiowpHl42aQOvJzMLm5qInXumyKo3l3dm3YwtRmNSz0NYYyUsh_ElVJ5JicWsQzGV-szy7KbSm-g" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<h4 class="font-h3 text-h2 text-on-surface" style="">ChatCYA</h4>
+<span class="bg-surface-container-high border border-quiet px-2 py-0.5 font-label-caps text-[10px] text-primary uppercase" style="">AI Communication Layer</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-lg" style="">
+                            ChatCYA is a firm-controlled AI communication layer designed to reduce the privilege and discovery risks created when clients use consumer AI tools during active legal matters.
+                        </p>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="group">
+<div class="bg-surface-container border border-quiet overflow-hidden mb-md aspect-[16/9]">
+<div class="w-full h-full bg-[#0C0F10] flex items-center justify-center relative">
+<img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="Clean data visualization dashboard showing connected nodes and claim maps for legal evidence tracking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc73q6liVcmPnJ_Ltx0iyV-DWdnavUDPr6u-JpQBvyRrG8aTtCpqOyKRc-WqDNTTDw0uoHMIFLS-RcGl09fIkbczw5gzPErW95Xtvy47XG2EbhqoMz0b41I3SxOs_4pIa3sz49lD4Ez8mOVz3RWP-rSkEeibM9BNn-5lvwkewmFVPR04iB4kce3XfWqawx3ODz_sx8DqX06TBqi5Ud-A5HjoHEMm3sHVtcjSXPPDyl6ysSIadJQ8O40OFxY3C8Zqriuj2Y7WTcFw" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<h4 class="font-h3 text-h2 text-on-surface" style="">LIP</h4>
+<span class="bg-surface-container-high border border-quiet px-2 py-0.5 font-label-caps text-[10px] text-primary uppercase" style="">Legal Intelligence System</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-lg" style="">LIP is a legal intelligence system that structures case materials around claims, issues, facts, evidence, and source traceability. Designed to move legal work from scattered documents and memory into a structured case system.</p>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="group">
+<div class="bg-surface-container border border-quiet overflow-hidden mb-md aspect-[16/9]">
+<div class="w-full h-full bg-[#0C0F10] flex items-center justify-center relative">
+<img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700" data-alt="Clean data visualization dashboard showing connected nodes and claim maps for legal evidence tracking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc73q6liVcmPnJ_Ltx0iyV-DWdnavUDPr6u-JpQBvyRrG8aTtCpqOyKRc-WqDNTTDw0uoHMIFLS-RcGl09fIkbczw5gzPErW95Xtvy47XG2EbhqoMz0b41I3SxOs_4pIa3sz49lD4Ez8mOVz3RWP-rSkEeibM9BNn-5lvwkewmFVPR04iB4kce3XfWqawx3ODz_sx8DqX06TBqi5Ud-A5HjoHEMm3sHVtcjSXPPDyl6ysSIadJQ8O40OFxY3C8Zqriuj2Y7WTcFw" style=""/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<h4 class="font-h3 text-h2 text-on-surface" style="">PRR Tracking System</h4>
+<span class="bg-surface-container-high border border-quiet px-2 py-0.5 font-label-caps text-[10px] text-primary uppercase" style="">Data Infrastructure</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-lg" style="">A system for ingesting, normalizing, and tracking public records requests across agencies. Transforms fragmented responses into structured datasets, timelines, and accountability signals. Techniques developed here inform how we structure complex discovery datasets in litigation.</p>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl my-xl bg-[#161B1D] border border-quiet relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full blur-[100px]"></div>
+<div class="px-xl relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-lg items-center">
+<div class="lg:col-span-8">
+<h2 class="font-h2 text-display text-on-surface mb-md" style="">Improve how your cases move.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl" style="">
+                        For active litigation teams, the highest-value gains usually come from small changes made consistently: better intake, cleaner discovery structure, safer AI usage, and tools built around the way the case is actually being handled.
+                    </p>
+</div>
+<div class="lg:col-span-4 lg:text-right">
+<button class="bg-primary-container text-on-primary-fixed font-h3 text-body-md px-xl py-4 font-bold hover:shadow-[0_0_20px_rgba(38,184,166,0.3)] transition-all" style="">
+                        Schedule a Conversation
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#101416] dark:bg-[#101416] border-t border-[#2A2E30] full-width py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 max-w-[1200px] mx-auto gap-4">
+<div class="font-['Space_Grotesk'] text-xs tracking-wider uppercase text-[#E0E3E5] opacity-50" style="">
+                © 2026 Jeremy Thacker
+            </div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs tracking-wider uppercase text-[#E0E3E5] opacity-50 hover:text-[#26B8A6] transition-opacity cursor-pointer" href="#" style="">LinkedIn</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-wider uppercase text-[#E0E3E5] opacity-50 hover:text-[#26B8A6] transition-opacity cursor-pointer" href="#" style="">GitHub</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-wider uppercase text-[#E0E3E5] opacity-50 hover:text-[#26B8A6] transition-opacity cursor-pointer" href="#" style="">Email</a>
+</div>
+</div>
+</footer>
+</body></html>
